@@ -1,0 +1,188 @@
+* {
+  padding: 0;
+  margin: 0
+}
+body {
+  background: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+#introPage {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  with: 100%;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  text-align: center;
+}
+#introPage h1 {
+  font-size: 55px;
+}
+#introPage h2 {
+  font-size: 15px;
+}
+#introPage h1, #introPage h2{
+  font-family: 'Poor Story';
+  text-transform: uppercase;
+  color: white;
+}
+#introPage #usernameError {
+  visibility: hidden;
+  line-height: 30px;
+  font-size: 10px;
+  font-family: 'Poor Story';
+  text-transform: uppercase;
+  color: white;
+}
+#introPage #login {
+  display: block;
+  position: relative;
+  width: 300px;
+}
+#login #username {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  border-radius: 2px;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+}
+#login #submit {
+  position: relative;
+  display: block;
+  background: #ffee21;
+  color: #ca3800;
+  width: 50%;
+  left: 25%;
+  height: 30px;
+  margin-top: 10px;
+  text-align: center;
+  outline: none;
+  border: 0px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: 'Arvo';
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+#login #settings {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+#settings #musicCheckbox, #settings #fullScreenCheckbox {
+  margin-top: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+#settings p {
+  display: inline-block;
+  color: white;
+  font-family: 'Poor Story';
+}
+#settings #ratioSelection {
+  display: none;
+}
+
+
+
+#hud {
+  display: none;
+  position: fixed;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+#hud #chatForm {
+  position: absolute;
+  bottom: 0;
+  left: 35%;
+  width: 30%;
+  height: 20px;
+}
+#chatForm #message {
+  position: absolute;
+  background: rgba(255,255,255,0.5);
+  width: 78%;
+  height: 100%;
+  outline: none !important;
+  border: 0px;
+  text-align: center;
+}
+#chatForm #send {
+  position: absolute;
+  background: #ffee21;
+  left: 80%;
+  width: 20%;
+  height: 100%;
+  font-family: 'Arvo';
+  text-transform: uppercase;
+  color: #ca3800;
+  text-align: center;
+}
+
+#login #username:focus, #chatForm #message:focus{
+  outline: none !important;
+}
+
+#hud #rooms {
+  position: absolute;
+  bottom: 0;
+  text-align: left;
+}
+#rooms .room {
+  background: #ffee21;
+  color: #ca3800;
+  padding: 5px;
+  margin-left: 5px;
+  font-size: 8px;
+  font-family: 'Arvo';
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+#otherRooms .room {
+  margin-bottom: 5px;
+}
+
+#hud #about {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  font-size: 7px;
+  color: #ffffff;
+  font-family: 'Arvo';
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+  -webkit-transition: opacity 0.2s;
+}
+#about:hover {
+  opacity: 1 !important;
+}
+#aboutPage {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: 99999;
+}

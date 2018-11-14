@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cosmic Chat</title>
+<link href="https://fonts.googleapis.com/css?family=Arvo:700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="reset.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="introPage">
+  <h1>Cosmic Chat</h1>
+  <h2>An interactive side-scroller chatroom</h2>
+  <p id="usernameError">*Username already taken. Choose a different one.*</p>
+  <form id="login" autocomplete="off">
+    <input id="username" type="text" maxlength="15" placeholder="Choose a username">
+    <input id="submit" type="submit" value="ENTER GAME"></button>
+    <div id="settings">
+      <input type="checkbox" id="musicCheckbox">
+      <p>audio</p>
+      <input type="checkbox" id="fullScreenCheckbox">
+      <p>full screen</p>
+      <select id="ratioSelection">
+        <option value="1920/1080">1920/1080</option>
+        <option value="auto">auto</option>
+      </select>
+    </div>
+  </form>
+</div>
+
+
+<div id="hud">
+  <form id="chatForm" autocomplete="off">
+    <input id="message" type="text" maxlength="200" placeholder="send a message">
+    <input id="send" type="submit" value="SEND">
+  </form>
+
+  <div id="rooms">
+    <div id="otherRooms"></div>
+    <p id="currentRoom" class="room"></p>
+  </div>
+
+  <p id="about">About the creator</p>
+</div>
+
+
+<div id="aboutPage">
+  <h1>Magdi Hazaa</h1>
+  <p>test</p>
+</div>
+
+
+<script src="//rawgit.com/mrdoob/stats.js/master/build/stats.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.8.2/pixi.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

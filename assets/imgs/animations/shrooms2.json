@@ -1,0 +1,687 @@
+{"frames": {
+
+"shrooms2_0.png":
+{
+	"frame": {"x":0,"y":0,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_1.png":
+{
+	"frame": {"x":400,"y":0,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_2.png":
+{
+	"frame": {"x":800,"y":0,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_3.png":
+{
+	"frame": {"x":1200,"y":0,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_4.png":
+{
+	"frame": {"x":1600,"y":0,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_5.png":
+{
+	"frame": {"x":2000,"y":0,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_6.png":
+{
+	"frame": {"x":2400,"y":0,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_7.png":
+{
+	"frame": {"x":2800,"y":0,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_8.png":
+{
+	"frame": {"x":3200,"y":0,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_9.png":
+{
+	"frame": {"x":3600,"y":0,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_10.png":
+{
+	"frame": {"x":0,"y":450,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_11.png":
+{
+	"frame": {"x":400,"y":450,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_12.png":
+{
+	"frame": {"x":800,"y":450,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_13.png":
+{
+	"frame": {"x":1200,"y":450,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_14.png":
+{
+	"frame": {"x":1600,"y":450,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_15.png":
+{
+	"frame": {"x":2000,"y":450,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_16.png":
+{
+	"frame": {"x":2400,"y":450,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_17.png":
+{
+	"frame": {"x":2800,"y":450,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_18.png":
+{
+	"frame": {"x":3200,"y":450,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_19.png":
+{
+	"frame": {"x":3600,"y":450,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_20.png":
+{
+	"frame": {"x":0,"y":900,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_21.png":
+{
+	"frame": {"x":400,"y":900,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_22.png":
+{
+	"frame": {"x":800,"y":900,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_23.png":
+{
+	"frame": {"x":1200,"y":900,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_24.png":
+{
+	"frame": {"x":1600,"y":900,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_25.png":
+{
+	"frame": {"x":2000,"y":900,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_26.png":
+{
+	"frame": {"x":2400,"y":900,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_27.png":
+{
+	"frame": {"x":2800,"y":900,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_28.png":
+{
+	"frame": {"x":3200,"y":900,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_29.png":
+{
+	"frame": {"x":3600,"y":900,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_30.png":
+{
+	"frame": {"x":0,"y":1350,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_31.png":
+{
+	"frame": {"x":400,"y":1350,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_32.png":
+{
+	"frame": {"x":800,"y":1350,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_33.png":
+{
+	"frame": {"x":1200,"y":1350,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_34.png":
+{
+	"frame": {"x":1600,"y":1350,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_35.png":
+{
+	"frame": {"x":2000,"y":1350,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_36.png":
+{
+	"frame": {"x":2400,"y":1350,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_37.png":
+{
+	"frame": {"x":2800,"y":1350,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_38.png":
+{
+	"frame": {"x":3200,"y":1350,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_39.png":
+{
+	"frame": {"x":3600,"y":1350,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_40.png":
+{
+	"frame": {"x":0,"y":1800,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_41.png":
+{
+	"frame": {"x":400,"y":1800,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_42.png":
+{
+	"frame": {"x":800,"y":1800,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_43.png":
+{
+	"frame": {"x":1200,"y":1800,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_44.png":
+{
+	"frame": {"x":1600,"y":1800,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_45.png":
+{
+	"frame": {"x":2000,"y":1800,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_46.png":
+{
+	"frame": {"x":2400,"y":1800,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_47.png":
+{
+	"frame": {"x":2800,"y":1800,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_48.png":
+{
+	"frame": {"x":3200,"y":1800,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_49.png":
+{
+	"frame": {"x":3600,"y":1800,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_50.png":
+{
+	"frame": {"x":0,"y":2250,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_51.png":
+{
+	"frame": {"x":400,"y":2250,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_52.png":
+{
+	"frame": {"x":800,"y":2250,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_53.png":
+{
+	"frame": {"x":1200,"y":2250,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_54.png":
+{
+	"frame": {"x":1600,"y":2250,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_55.png":
+{
+	"frame": {"x":2000,"y":2250,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_56.png":
+{
+	"frame": {"x":2400,"y":2250,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_57.png":
+{
+	"frame": {"x":2800,"y":2250,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_58.png":
+{
+	"frame": {"x":3200,"y":2250,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_59.png":
+{
+	"frame": {"x":3600,"y":2250,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_60.png":
+{
+	"frame": {"x":0,"y":2700,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_61.png":
+{
+	"frame": {"x":400,"y":2700,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_62.png":
+{
+	"frame": {"x":800,"y":2700,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_63.png":
+{
+	"frame": {"x":1200,"y":2700,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_64.png":
+{
+	"frame": {"x":1600,"y":2700,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_65.png":
+{
+	"frame": {"x":2000,"y":2700,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_66.png":
+{
+	"frame": {"x":2400,"y":2700,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_67.png":
+{
+	"frame": {"x":2800,"y":2700,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_68.png":
+{
+	"frame": {"x":3200,"y":2700,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_69.png":
+{
+	"frame": {"x":3600,"y":2700,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_70.png":
+{
+	"frame": {"x":0,"y":3150,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_71.png":
+{
+	"frame": {"x":400,"y":3150,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_72.png":
+{
+	"frame": {"x":800,"y":3150,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_73.png":
+{
+	"frame": {"x":1200,"y":3150,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_74.png":
+{
+	"frame": {"x":1600,"y":3150,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_75.png":
+{
+	"frame": {"x":2000,"y":3150,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_76.png":
+{
+	"frame": {"x":2400,"y":3150,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_77.png":
+{
+	"frame": {"x":2800,"y":3150,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_78.png":
+{
+	"frame": {"x":3200,"y":3150,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_79.png":
+{
+	"frame": {"x":3600,"y":3150,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_80.png":
+{
+	"frame": {"x":0,"y":3600,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_81.png":
+{
+	"frame": {"x":400,"y":3600,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_82.png":
+{
+	"frame": {"x":800,"y":3600,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+},
+"shrooms2_83.png":
+{
+	"frame": {"x":1200,"y":3600,"w":400,"h":450},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":450},
+	"sourceSize": {"w":400,"h":450}
+}},
+"animations": {
+	"shrooms2": ["shrooms2_0.png","shrooms2_1.png","shrooms2_2.png","shrooms2_3.png","shrooms2_4.png","shrooms2_5.png","shrooms2_6.png","shrooms2_7.png","shrooms2_8.png","shrooms2_9.png","shrooms2_10.png","shrooms2_11.png","shrooms2_12.png","shrooms2_13.png","shrooms2_14.png","shrooms2_15.png","shrooms2_16.png","shrooms2_17.png","shrooms2_18.png","shrooms2_19.png","shrooms2_20.png","shrooms2_21.png","shrooms2_22.png","shrooms2_23.png","shrooms2_24.png","shrooms2_25.png","shrooms2_26.png","shrooms2_27.png","shrooms2_28.png","shrooms2_29.png","shrooms2_30.png","shrooms2_31.png","shrooms2_32.png","shrooms2_33.png","shrooms2_34.png","shrooms2_35.png","shrooms2_36.png","shrooms2_37.png","shrooms2_38.png","shrooms2_39.png","shrooms2_40.png","shrooms2_41.png","shrooms2_42.png","shrooms2_43.png","shrooms2_44.png","shrooms2_45.png","shrooms2_46.png","shrooms2_47.png","shrooms2_48.png","shrooms2_49.png","shrooms2_50.png","shrooms2_51.png","shrooms2_52.png","shrooms2_53.png","shrooms2_54.png","shrooms2_55.png","shrooms2_56.png","shrooms2_57.png","shrooms2_58.png","shrooms2_59.png","shrooms2_60.png","shrooms2_61.png","shrooms2_62.png","shrooms2_63.png","shrooms2_64.png","shrooms2_65.png","shrooms2_66.png","shrooms2_67.png","shrooms2_68.png","shrooms2_69.png","shrooms2_70.png","shrooms2_71.png","shrooms2_72.png","shrooms2_73.png","shrooms2_74.png","shrooms2_75.png","shrooms2_76.png","shrooms2_77.png","shrooms2_78.png","shrooms2_79.png","shrooms2_80.png","shrooms2_81.png","shrooms2_82.png","shrooms2_83.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "shrooms2.png",
+	"format": "RGBA8888",
+	"size": {"w":4000,"h":4050},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:8716f95341dbc7f06ef8fb913a34fea8:dc4ae88fc48570fd2b01527699b31038:94ae38c449bd99bd0fdb9a140cbee8dd$"
+}
+}

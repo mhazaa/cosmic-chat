@@ -1,0 +1,73 @@
+{"frames": {
+
+"branch_island1.png":
+{
+	"frame": {"x":1029,"y":164,"w":657,"h":388},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":657,"h":388},
+	"sourceSize": {"w":657,"h":388}
+},
+"branch_island2.png":
+{
+	"frame": {"x":0,"y":835,"w":1845,"h":1091},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1845,"h":1091},
+	"sourceSize": {"w":1845,"h":1091}
+},
+"branch_mountain1.png":
+{
+	"frame": {"x":0,"y":0,"w":305,"h":117},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":305,"h":117},
+	"sourceSize": {"w":305,"h":117}
+},
+"branch_mountain2.png":
+{
+	"frame": {"x":943,"y":0,"w":416,"h":164},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":416,"h":164},
+	"sourceSize": {"w":416,"h":164}
+},
+"bridge.png":
+{
+	"frame": {"x":0,"y":552,"w":1825,"h":283},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1825,"h":283},
+	"sourceSize": {"w":1825,"h":283}
+},
+"grass1.png":
+{
+	"frame": {"x":0,"y":164,"w":1029,"h":156},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1029,"h":156},
+	"sourceSize": {"w":1029,"h":156}
+},
+"grass2.png":
+{
+	"frame": {"x":305,"y":0,"w":638,"h":101},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":638,"h":101},
+	"sourceSize": {"w":638,"h":101}
+}},
+"animations": {
+	"branch_island": ["branch_island1.png","branch_island2.png"],
+	"branch_mountain": ["branch_mountain1.png","branch_mountain2.png"],
+	"grass": ["grass1.png","grass2.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "oranges.png",
+	"format": "RGBA8888",
+	"size": {"w":1845,"h":1926},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:9916129ed5b8ad8cf21dbd0a3c87027c:88df30e56b7881b53f18b2e74a54f4da:cef7bf8b49433cc60e9a1be191baf1b6$"
+}
+}

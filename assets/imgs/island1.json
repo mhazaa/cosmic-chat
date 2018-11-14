@@ -1,0 +1,30 @@
+{"frames": {
+
+"big_island.png":
+{
+	"frame": {"x":0,"y":0,"w":947,"h":992},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":947,"h":992},
+	"sourceSize": {"w":947,"h":992},
+	"anchor": {"x":0.5,"y":0.5}
+},
+"first_island.png":
+{
+	"frame": {"x":0,"y":992,"w":432,"h":319},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":432,"h":319},
+	"sourceSize": {"w":432,"h":319},
+	"anchor": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "island1.png",
+	"format": "RGBA8888",
+	"size": {"w":947,"h":1311},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:399bdaaf3f6380560e9254011825d9dc:4df07c078069d3ea5e4071919905607b:87e65f62494b42e6d78330c705a43b67$"
+}
+}

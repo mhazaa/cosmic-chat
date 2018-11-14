@@ -1,0 +1,36 @@
+{"frames": {
+
+"glowing_leaves.png":
+{
+	"frame": {"x":0,"y":1267,"w":1000,"h":294},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1000,"h":294},
+	"sourceSize": {"w":1000,"h":294}
+},
+"highest_island.png":
+{
+	"frame": {"x":353,"y":0,"w":999,"h":1267},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":999,"h":1267},
+	"sourceSize": {"w":999,"h":1267}
+},
+"small_island.png":
+{
+	"frame": {"x":0,"y":0,"w":353,"h":675},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":353,"h":675},
+	"sourceSize": {"w":353,"h":675}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "island2.png",
+	"format": "RGBA8888",
+	"size": {"w":1352,"h":1561},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:d21301534a32567613d732c7ae751eb9:94e0c9dda3c0ed292a5b4c52bd192cc9:80095ac55bb5a0bbf0b2c7a3aa4f349d$"
+}
+}
