@@ -38,9 +38,7 @@ io.on('connection', function(socket){
 	function generateRandom(min, max){
 		var num = Math.floor(Math.random() * (max - min + 1)) + min;
 		for(var key in players[socket.room]){
-			if(num == players[socket.room][key].arrID){
-				return generateRandom(min, max);
-			}
+			if(num == Number(key)) return generateRandom(min, max);
 		}
 		return num;
 	}
@@ -66,52 +64,35 @@ io.on('connection', function(socket){
 		joinRoom(socket.fullestRoomNum);
 	}
 	function leaveRoom(room){
-		delete players[room][socket.arrID];
+		if(typeof socket.room == 'number') delete players[room][socket.arrID];
 		socket.room = false;
+		clearTimeout(socket.idleTimeout);
 		console.log('arr id of ', socket.arrID, ' left room ', room);
 	}
-
 	socket.on('startGame', function(){
 		socket.emit('startGame', socket.arrID);
 		joinFullestRoom();
-
-		/*
-		socket.idle = 0;
-		socket.cached = {};
-		socket.checkIdle = function(){
-			socket.cached = players[socket.room][socket.arrID];
-			socket.idle++;
-			console.log(socket.idle);
-
-			if(socket.cached.vx != players[socket.room][socket.arrID].vx ||
-				socket.cached.relationalX != players[socket.room][socket.arrID].relationalX ||
-				socket.cached.relationalY != players[socket.room][socket.arrID].relationalY ||
-				socket.cached.direction != players[socket.room][socket.arrID].direction ||
-				socket.cached.messages[0].message != players[socket.room][socket.arrID].messages[0].message
-			){
-				socket.idle=0;
-			}
-			socket.cached = players[socket.room][socket.arrID];
-			if(socket.idle>3){
-				socket.disconnect();
-			}
-
-			socket.checkIdleTimeout = setTimeout(socket.checkIdle,5000);
+		function idle(){
+			leaveRoom(socket.room);
+			socket.room = 'idle';
+			socket.emit('idle');
 		}
-		socket.checkIdle();
-		*/
-
 		socket.on('update', function(data){
-			if(typeof socket.room == 'number') players[socket.room][socket.arrID] = data;
+			if(typeof socket.room == 'number'){
+				players[socket.room][socket.arrID] = data;
+				clearTimeout(socket.idleTimeout);
+				socket.idleTimeout = setTimeout(idle,120000);
+			} else {
+				joinFullestRoom();
+				socket.emit('wakeup');
+			}
 		});
 		socket.on('disconnect', function(){
 			leaveRoom(socket.room);
-			clearTimeout(socket.checkIdleTimeout);
 		});
 		socket.on('switchRoom', function(data){
 			leaveRoom(socket.room);
 			joinRoom(data);
-			socket.emit('roomsInfo');
 		});
 		socket.on('fetchRoomsInfo', function(){
 			var otherRoomsInfo = {};

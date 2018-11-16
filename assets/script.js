@@ -1,6 +1,5 @@
-//idle
-//creator page
 //complex collision
+//creator page
 //clean code
 //otherplayers lag
 
@@ -50,6 +49,7 @@ let globals = {
   keyPressed: {},
   loaderProgress: 0,
   loadingUpdate: null,
+  idleNotice: null,
   mainFont: 'Arvo',
   secondaryFont: 'Poor Story',
   music: new Audio('audio/song.mp3'),
@@ -429,6 +429,8 @@ class PlayerCharacter extends Pawn {
     this.isFalling = true;
     this.collisionBox = new Rectangle(-this.sprite.width/4, 0, this.sprite.width/2, this.sprite.height,0xFFFF0,this);
     this.collisionBox.alpha = 0;
+
+    this.once = true;
   }
   moving(){
     //horizontal movememnt
@@ -678,6 +680,10 @@ let line;
 function playSetup(){
   //main player sprite
   player = new PlayerCharacter(0.2, stages.still);
+  globals.idleNotice = new Text(20, globals.mainFont, 0xFFFFFF, stages.hud);
+  globals.idleNotice.text = "You were idle for too long\n Just start moving again to join back";
+  helperFunctions.center.apply(globals.idleNotice);
+  globals.idleNotice.visible = false;
   /*
   line = new PIXI.Graphics();
   line.lineStyle(5, 0xffffff);
@@ -688,6 +694,7 @@ function playSetup(){
   */
 
   //tutorial
+  /*
   let tutorial = new Tutorial('imgs/tutorial.png', 0.4);
   //actors
   let background = new Actor('imgs/background.jpg', 0, -1, 2, stages.background);
@@ -736,7 +743,7 @@ function playSetup(){
   }
   //overlay.pluginName = 'picture';
   //overlay.blendMode = PIXI.BLEND_MODES.OVERLAY;
-
+  */
   //collision boxes
   let branch = new CollisionBox(0.30, 0.83, 0.15, 0.04);
   let branchh = new CollisionBox(0.20, 0.85, 0.10, 0.04);
@@ -860,9 +867,9 @@ let websocketEvents = function(){
   var int;
   dom.currentRoom.addEventListener('click', function(){
     if(cascaded){
-      dom.otherRooms.innerHTML = '';
-      clearInterval(int);
-      cascaded = false;
+        dom.otherRooms.innerHTML = '';
+        clearInterval(int);
+        cascaded = false;
     }
     else {
       socket.emit('fetchRoomsInfo');
@@ -886,13 +893,39 @@ let websocketEvents = function(){
       (function(i){
         roomButtons[i].addEventListener('click', function(){
           socket.emit('switchRoom', Number(roomButtons[i].id));
+          player.updateServer();
+          dom.otherRooms.innerHTML = '';
+          clearInterval(int);
+          cascaded = false;
         });
       })(i);
     }
   });
   setInterval(function(){
-    player.updateServer();
+    if(player.vx!=0 || player.vy!=0 || player.messages[0].message!=''){
+      player.once = true;
+      player.updateServer();
+    } else if(player.vx==0 && player.once){
+      player.once = false;
+      player.updateServer();
+    }
   },1000/30);
+  socket.on('idle', function(){
+    stages.still.alpha = 0.7;
+    stages.background.alpha = 0.7;
+    stages.midground.alpha = 0.7;
+    stages.midgroundBack.alpha = 0.7;
+    stages.foreground.alpha = 0.7;
+    globals.idleNotice.visible = true;
+  });
+  socket.on('wakeup', function(){
+    stages.still.alpha = 1;
+    stages.background.alpha = 1;
+    stages.midground.alpha = 1;
+    stages.midgroundBack.alpha = 1;
+    stages.foreground.alpha = 1;
+    globals.idleNotice.visible = false;
+  });
 }
 //about page
 dom.aboutButton.addEventListener('click', function(){
