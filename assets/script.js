@@ -1,16 +1,7 @@
-//enter fullest room at any time //check name availavity for fullest room
-//idle //idle interval
-//check names in all rooms
-//checkrooms
-//direction instead of vx (will fix direction when not on tab);
+//idle
 //creator page
-//sudden slowness (make all player animation into one sprite)
-//multiple rooms //buttons problem, seperate main and other rooms
 //complex collision
 //clean code
-//check username again
-//multple rooms hud//if full dont break site
-
 //otherplayers lag
 
 //back burner for now:
@@ -21,6 +12,8 @@
 ////finish painting
 //animations
 //swing collisions
+//if full dont break site
+//check username again
 
 
 let socket = io.connect(); //initialize socket io
@@ -696,15 +689,6 @@ function playSetup(){
 
   //tutorial
   let tutorial = new Tutorial('imgs/tutorial.png', 0.4);
-
-  //hud
-
-
-  //dom.aboutButton.addEventListener('click', function(){
-    //dom.aboutPage.style.display = 'block';
-  //});
-
-
   //actors
   let background = new Actor('imgs/background.jpg', 0, -1, 2, stages.background);
   let midgroundBack = new Actor('imgs/midground_back.png', 0, 0.5, 0.5, stages.midgroundBack);
@@ -752,7 +736,7 @@ function playSetup(){
   }
   //overlay.pluginName = 'picture';
   //overlay.blendMode = PIXI.BLEND_MODES.OVERLAY;
-  
+
   //collision boxes
   let branch = new CollisionBox(0.30, 0.83, 0.15, 0.04);
   let branchh = new CollisionBox(0.20, 0.85, 0.10, 0.04);
@@ -872,7 +856,6 @@ let websocketEvents = function(){
       globals.otherPlayers[i].visible = false;
     }
   });
-  /*
   var cascaded = false;
   var int;
   dom.currentRoom.addEventListener('click', function(){
@@ -885,7 +868,7 @@ let websocketEvents = function(){
       socket.emit('fetchRoomsInfo');
       int = setInterval(function(){
         socket.emit('fetchRoomsInfo');
-      },1000);
+      },500);
       cascaded = true;
     }
   });
@@ -907,11 +890,14 @@ let websocketEvents = function(){
       })(i);
     }
   });
-  */
   setInterval(function(){
     player.updateServer();
   },1000/30);
 }
+//about page
+dom.aboutButton.addEventListener('click', function(){
+  dom.aboutPage.style.display = 'block';
+});
 //send text
 dom.chatForm.addEventListener('submit', function(e){
   e.preventDefault();

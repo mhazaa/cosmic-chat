@@ -17,17 +17,19 @@ app.use(function(req, res, next) {
 var router = require('./controllers/router.js');
 router(app);
 
-var players = [ {},{} ];
+var players = [ {},{},{},{},{},{} ];
 var roomSize = 50;
 //websockets
 io.on('connection', function(socket){
 	socket.on('checkUsername', function(data){
 		socket.usernameTaken = false;
-		for(var key in players[socket.room]){
-			if(players[socket.room][key].username == data){
-				socket.usernameTaken = true;
-				socket.emit('isUsernameTaken', socket.usernameTaken);
-				return;
+		for(var i=0; i<players.length; i++){
+			for(var key in players[i]){
+				if(players[i][key].username == data){
+					socket.usernameTaken = true;
+					socket.emit('isUsernameTaken', socket.usernameTaken);
+					return;
+				}
 			}
 		}
 		socket.emit('isUsernameTaken', socket.usernameTaken);
@@ -43,7 +45,7 @@ io.on('connection', function(socket){
 		return num;
 	}
 	function joinRoom(room){
-		if(room>=players.length) room=0;
+		if(room>players.length) rooms=0;
 		if(Object.keys(players[room]).length>=roomSize){
 			joinRoom(room+1);
 			return;
@@ -52,23 +54,35 @@ io.on('connection', function(socket){
 		socket.arrID = generateRandom(0,roomSize-1);
 		console.log('arr id of ', socket.arrID, ' joined room ', socket.room);
 	}
+	function joinFullestRoom(){
+		socket.fullestRoom = 0;
+		socket.fullestRoomNum = 0;
+		for(var i=0; i<players.length; i++){
+			if(Object.keys(players[i]).length>socket.fullestRoom){
+				socket.fullestRoom = Object.keys(players[i]).length;
+				socket.fullestRoomNum = i;
+			}
+		}
+		joinRoom(socket.fullestRoomNum);
+	}
 	function leaveRoom(room){
 		delete players[room][socket.arrID];
-		//socket.room = false;
+		socket.room = false;
 		console.log('arr id of ', socket.arrID, ' left room ', room);
 	}
 
 	socket.on('startGame', function(){
-		joinRoom(0);
 		socket.emit('startGame', socket.arrID);
+		joinFullestRoom();
 
 		/*
 		socket.idle = 0;
 		socket.cached = {};
 		socket.checkIdle = function(){
+			socket.cached = players[socket.room][socket.arrID];
 			socket.idle++;
-			//console.log(socket.idle);
-			//	socket.cached = players[socket.room][socket.arrID];
+			console.log(socket.idle);
+
 			if(socket.cached.vx != players[socket.room][socket.arrID].vx ||
 				socket.cached.relationalX != players[socket.room][socket.arrID].relationalX ||
 				socket.cached.relationalY != players[socket.room][socket.arrID].relationalY ||
@@ -78,12 +92,13 @@ io.on('connection', function(socket){
 				socket.idle=0;
 			}
 			socket.cached = players[socket.room][socket.arrID];
-
 			if(socket.idle>3){
 				socket.disconnect();
 			}
+
+			socket.checkIdleTimeout = setTimeout(socket.checkIdle,5000);
 		}
-		socket.interval = setInterval(socket.checkIdle,5000);
+		socket.checkIdle();
 		*/
 
 		socket.on('update', function(data){
@@ -91,11 +106,12 @@ io.on('connection', function(socket){
 		});
 		socket.on('disconnect', function(){
 			leaveRoom(socket.room);
-			//clearInterval(socket.interval);
+			clearTimeout(socket.checkIdleTimeout);
 		});
 		socket.on('switchRoom', function(data){
 			leaveRoom(socket.room);
 			joinRoom(data);
+			socket.emit('roomsInfo');
 		});
 		socket.on('fetchRoomsInfo', function(){
 			var otherRoomsInfo = {};
