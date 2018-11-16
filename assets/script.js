@@ -694,7 +694,6 @@ function playSetup(){
   */
 
   //tutorial
-  /*
   let tutorial = new Tutorial('imgs/tutorial.png', 0.4);
   //actors
   let background = new Actor('imgs/background.jpg', 0, -1, 2, stages.background);
@@ -743,7 +742,7 @@ function playSetup(){
   }
   //overlay.pluginName = 'picture';
   //overlay.blendMode = PIXI.BLEND_MODES.OVERLAY;
-  */
+  
   //collision boxes
   let branch = new CollisionBox(0.30, 0.83, 0.15, 0.04);
   let branchh = new CollisionBox(0.20, 0.85, 0.10, 0.04);
