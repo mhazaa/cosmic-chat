@@ -154,7 +154,6 @@ body {
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
 }
-
 #otherRooms .room {
   margin-bottom: 5px;
 }

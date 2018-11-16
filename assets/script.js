@@ -1,5 +1,8 @@
 //enter fullest room at any time //check name availavity for fullest room
-//idle
+//idle //idle interval
+//check names in all rooms
+//checkrooms
+//direction instead of vx (will fix direction when not on tab);
 //creator page
 //sudden slowness (make all player animation into one sprite)
 //multiple rooms //buttons problem, seperate main and other rooms
@@ -213,6 +216,10 @@ let helperFunctions = {
     }
     return num;
   },
+  center: function(){
+    this.x = renderer.width/2 - this.width/2;
+    this.y = renderer.height/2 - this.height/2;
+  },
   // line intercept math by Paul Bourke http://paulbourke.net/geometry/pointlineplane/
   // Determine the intersection point of two line segments
   // Return FALSE if the lines don't intersect
@@ -279,10 +286,6 @@ class Rectangle extends PIXI.Graphics {
     this.beginFill(color);
     this.drawRect(x, y, w, h);
     stage.addChild(this);
-  }
-  center(){
-    this.x = renderer.width/2 - this.width/2;
-    this.y = renderer.height/2 - this.height/2;
   }
 }
 class Button extends Rectangle {
@@ -406,10 +409,10 @@ class Pawn extends PIXI.Container {
     }
   }
   changeDirection(){
-    if(this.vx<0 && this.sprite.scale.x>0){
+    if(this.direction==1 && this.sprite.scale.x>0){
       this.sprite.scale.x = -1;
       this.sprite.width = this.sprite.height / this.ratio;
-    } else if(this.vx>0 && this.sprite.scale.x<0){
+    } else if(this.direction==0 && this.sprite.scale.x<0){
       this.sprite.scale.x = 1;
       this.sprite.width = this.sprite.height / this.ratio;
     }
@@ -424,6 +427,7 @@ class PlayerCharacter extends Pawn {
     this.relationalY = 0;
     this.vx = 0;
     this.vy = 0;
+    this.direction = 0;
     this.walkingSpeed = 0.12;
     this.flyingSpeed = 0.12;
     this.slow = 0.12;
@@ -437,8 +441,10 @@ class PlayerCharacter extends Pawn {
     //horizontal movememnt
     if(globals.keyPressed[39]){//right arrow
       this.vx = this.walkingSpeed;
+      this.direction = 0;
     } else if(globals.keyPressed[37]){//left arrow
       this.vx = -this.walkingSpeed;
+      this.direction = 1;
     } else {
       this.vx = 0;
     }
@@ -547,6 +553,16 @@ class PlayerCharacter extends Pawn {
         this.isFalling = true;
       }
     }
+  }
+  updateServer(){
+    socket.emit('update', {
+      username: this.username,
+      vx: this.vx,
+      direction: this.direction,
+      relationalX: this.relationalX,
+      relationalY: this.relationalY,
+      messages: this.messages
+    });
   }
   update(){
     this.animationUpdate();
@@ -682,29 +698,12 @@ function playSetup(){
   let tutorial = new Tutorial('imgs/tutorial.png', 0.4);
 
   //hud
-  socket.on('otherRoomsInfo', function(data){
-    dom.currentRoom.innerHTML = 'room' + data.currentRoom.room + ' : ' + data.currentRoom.length + '/' + globals.numOfPlayers;
-    /*dom.otherRooms.innerHTML = '';
-    for(var key in data.otherRooms){
-      var room = document.createElement('p');
-      room.innerHTML = 'room' + key + ' : ' + data.otherRooms[key] + '/' + globals.numOfPlayers;
-      room.classList.add('room');
-      room.id = key;
-      dom.otherRooms.prepend(room);
-    }
-    var roomButtons = dom.otherRooms.getElementsByTagName('p');
-    for(var i=0; i<roomButtons.length; i++){
-      (function(i){
-        roomButtons[i].addEventListener('click', function(){
-          socket.emit('switchRoom', roomButtons[i].id);
-        });
-      })(i);
-    }*/
-  });
+
 
   //dom.aboutButton.addEventListener('click', function(){
     //dom.aboutPage.style.display = 'block';
   //});
+
 
   //actors
   let background = new Actor('imgs/background.jpg', 0, -1, 2, stages.background);
@@ -753,7 +752,7 @@ function playSetup(){
   }
   //overlay.pluginName = 'picture';
   //overlay.blendMode = PIXI.BLEND_MODES.OVERLAY;
-
+  
   //collision boxes
   let branch = new CollisionBox(0.30, 0.83, 0.15, 0.04);
   let branchh = new CollisionBox(0.20, 0.85, 0.10, 0.04);
@@ -791,12 +790,12 @@ function playSetup(){
 //loading setup [loaded instantly]
 function loadingSetup(){
   let fill = new Rectangle(0,0,600,3,0x323232,menuStages.loadingScreen);
-  fill.center();
+  helperFunctions.center.apply(fill);
   let loading = new Rectangle(0,0,600,3,0xffee21,menuStages.loadingScreen);
-  loading.center();
+  helperFunctions.center.apply(loading);
   let loadingText = new Text(60, globals.secondaryFont, 0xffee21,menuStages.loadingScreen);
-  loadingText.x = renderer.width/2 - loadingText.width/2;
-  loadingText.y = renderer.height/2 - loading.height*30;
+  helperFunctions.center.apply(loadingText);
+  loadingText.y -= 40;
 
   globals.loadingUpdate = function(){
     loadingText.text = globals.loaderProgress + ' %';
@@ -845,40 +844,74 @@ window.requestAnimationFrame(gameLoop);
 //recieve otherPlayers object from server
 let websocketEvents = function(){
   socket.on('updateOtherPlayers', function(data){
-    //globals.hud.text = Object.keys(data).length+1 + ' / ' + globals.otherPlayers.length;
-    var ex = [];
-    for(var i=0; i<globals.numOfPlayers; i++){
-      ex.push(i);
+    dom.currentRoom.innerHTML = 'room' + data.room + ' : ' + (Object.keys(data.otherPlayers).length+1) + '/' + globals.numOfPlayers;
+    var existingPlayers = [];
+    for(var key in data.otherPlayers){
+      var a = data.otherPlayers[key];
+      existingPlayers.push(Number(key));
+      globals.otherPlayers[key].visible = true;
+      globals.otherPlayers[key].username = a.username;
+      globals.otherPlayers[key].direction = a.direction;
+      globals.otherPlayers[key].vx = a.vx;
+      globals.otherPlayers[key].relationalX = a.relationalX;
+      globals.otherPlayers[key].relationalY = a.relationalY;
+      globals.otherPlayers[key].messages = a.messages;
     }
-    for(var key in data){
-      var b = data[key];
-
-      var idx = ex.indexOf(b.arrID);
-      if (idx != -1) ex.splice(idx, 1);
-
-      globals.otherPlayers[b.arrID].visible = true;
-      globals.otherPlayers[b.arrID].username = b.username;
-      globals.otherPlayers[b.arrID].vx = b.vx;
-      globals.otherPlayers[b.arrID].relationalX = b.relationalX;
-      globals.otherPlayers[b.arrID].relationalY = b.relationalY;
-      globals.otherPlayers[b.arrID].messages = b.messages;
-    }
-    for(var x=0; x<ex.length; x++){
-      globals.otherPlayers[ex[x]].visible = false;
+    for(var i=0; i<globals.otherPlayers.length; i++){
+      var a = true;
+      for(var x=0; x<existingPlayers.length; x++){
+        if(i == existingPlayers[x]){
+          a = false;
+        }
+      }
+      if(a) globals.otherPlayers[i].visible = false;
     }
   });
-
+  socket.on('disconnect', function(){
+    for(var i=0; i<globals.otherPlayers.length; i++){
+      globals.otherPlayers[i].visible = false;
+    }
+  });
+  /*
+  var cascaded = false;
+  var int;
+  dom.currentRoom.addEventListener('click', function(){
+    if(cascaded){
+      dom.otherRooms.innerHTML = '';
+      clearInterval(int);
+      cascaded = false;
+    }
+    else {
+      socket.emit('fetchRoomsInfo');
+      int = setInterval(function(){
+        socket.emit('fetchRoomsInfo');
+      },1000);
+      cascaded = true;
+    }
+  });
+  socket.on('roomsInfo', function(data){
+    dom.otherRooms.innerHTML = '';
+    for(var key in data){
+      var room = document.createElement('p');
+      room.innerHTML = 'room' + key + ' : ' + data[key] + '/' + globals.numOfPlayers;
+      room.classList.add('room');
+      room.id = key;
+      dom.otherRooms.prepend(room);
+    }
+    var roomButtons = dom.otherRooms.getElementsByTagName('p');
+    for(var i=0; i<roomButtons.length; i++){
+      (function(i){
+        roomButtons[i].addEventListener('click', function(){
+          socket.emit('switchRoom', Number(roomButtons[i].id));
+        });
+      })(i);
+    }
+  });
+  */
   setInterval(function(){
-    socket.emit('update', {
-      username: player.username,
-      vx: player.vx,
-      relationalX: player.relationalX,
-      relationalY: player.relationalY,
-      messages: player.messages
-    });
+    player.updateServer();
   },1000/30);
 }
-
 //send text
 dom.chatForm.addEventListener('submit', function(e){
   e.preventDefault();
