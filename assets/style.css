@@ -92,19 +92,26 @@ body {
 #settings #ratioSelection {
   display: none;
 }
-
-
-
-#hud {
+#hudTop, #hudBottom {
   display: none;
   position: fixed;
-  bottom: 5px;
-  left: 0;
-  width: 100%;
   z-index: 999;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
-#hud #chatForm {
+#hudTop #audioIcon {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  opacity: 0.4;
+  background: url('imgs/audio_icon.png') center;
+  background-size: cover;
+}
+#hudBottom #chatForm {
   position: absolute;
   bottom: 0;
   left: 35%;
@@ -136,7 +143,7 @@ body {
   outline: none !important;
 }
 
-#hud #rooms {
+#hudBottom #rooms {
   position: absolute;
   bottom: 0;
   text-align: left;
@@ -158,7 +165,7 @@ body {
   margin-bottom: 5px;
 }
 
-#hud #about {
+#hudBottom #about {
   position: absolute;
   bottom: 0;
   right: 5px;
@@ -173,11 +180,10 @@ body {
 #about:hover {
   opacity: 1 !important;
 }
+
 #aboutPage {
   display: none;
   position: fixed;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
   width: 100%;
   height: 100%;
   top: 0;
@@ -185,13 +191,24 @@ body {
   text-align: center;
   z-index: 99999;
 }
+#aboutPage #aboutPageBackground {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
 #aboutPage #aboutPageContent {
   position: absolute;
-  width: 100%;
   text-align: center;
+  color: white;
+  left: 50%;
   top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  z-index: 2;
 }
 #aboutPageContent h1 {
   font-family: 'Arvo';
@@ -199,7 +216,22 @@ body {
 }
 #aboutPageContent p {
   font-family: 'Poor Story';
-  font-size: 12px;
+  font-size: 13px;
+}
+#aboutPageContent #logos {
+  display: block;
+  position: relative;
+  height: 30px;
+  margin: 10px 0;
+}
+#logos img {
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  padding-right: 5px;
+}
+#aboutPageContent .bigger {
+  font-size: 26px;
 }
 #aboutPageContent a {
   background: #ffee21;
@@ -207,4 +239,11 @@ body {
   padding: 10px 20px;
   color: white;
   text-decoration: none;
+  color: #ca3800;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: 'Arvo';
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin: 10px 0;
 }

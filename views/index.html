@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
 <div id="introPage">
   <h1>Cosmic Chat</h1>
   <h2>An interactive side-scroller chatroom</h2>
@@ -17,9 +18,9 @@
     <input id="username" type="text" maxlength="15" placeholder="Choose a username">
     <input id="submit" type="submit" value="ENTER GAME"></button>
     <div id="settings">
-      <input type="checkbox" id="musicCheckbox">
+      <input type="checkbox" id="musicCheckbox" checked>
       <p>audio</p>
-      <input type="checkbox" id="fullScreenCheckbox">
+      <input type="checkbox" id="fullScreenCheckbox" checked>
       <p>full screen</p>
       <select id="ratioSelection">
         <option value="1920/1080">1920/1080</option>
@@ -30,26 +31,36 @@
 </div>
 
 
-<div id="hud">
+<div id="hudTop">
+  <div id="audioIcon"></div>
+</div>
+<div id="hudBottom">
   <form id="chatForm" autocomplete="off">
     <input id="message" type="text" maxlength="200" placeholder="send a message">
     <input id="send" type="submit" value="SEND">
   </form>
-
   <div id="rooms">
     <div id="otherRooms"></div>
     <p id="currentRoom" class="room"></p>
   </div>
-
   <p id="about">About the creator</p>
 </div>
 
 
 <div id="aboutPage">
+  <div id="aboutPageBackground"></div>
   <div id="aboutPageContent">
-    <h1>Magdi Hazaa</h1>
-    <p>test</p>
-    <a href="">dsadsa</a>
+    <p>Heyo! I'm <span class="bigger">Magdi Hazaa</span>, the creator of this game. Thanks so much for visiting <span class="bigger">Cosmic Chat</span>. This was a personal project that took me close to 4 months to finish. I built it using a WebGL library; Pixi.js, with Node and Socket.IO for the back-end. And I painted the assets using a combination of Photoshop and Illustrator, with After Effects to animate some of the sprites.</p>
+    <div id="logos">
+      <img src="imgs/logos/javascript.png">
+      <img src="imgs/logos/pixi.png">
+      <img src="imgs/logos/node.png">
+      <img src="imgs/logos/socket.png">
+    </div>
+    <p>If you're curious, here's the GitHub repository for this project</p>
+    <a href="https://github.com/mhazaa/cosmic-chat" target="_blank">GitHub repository</a>
+    <p>If you enjoyed this, check my other work at my portfolio site</p>
+    <a href="http://magdi-hazaa.com" target="_blank">magdi-hazaa.com</a>
   </div>
 </div>
 

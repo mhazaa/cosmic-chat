@@ -1,5 +1,4 @@
 var express = require('express');
-var fs = require('fs');
 var app = express();
 var PORT = process.env.PORT || 4000;
 var server = app.listen(PORT, '0.0.0.0', function(){
@@ -16,6 +15,8 @@ app.use(function(req, res, next) {
 });
 var router = require('./controllers/router.js');
 router(app);
+var engine = require('./controllers/engine.js');
+engine(app);
 
 var players = [ {},{},{},{},{},{} ];
 var roomSize = 50;
