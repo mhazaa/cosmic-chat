@@ -15,8 +15,8 @@ app.use(function(req, res, next) {
 });
 var router = require('./controllers/router.js');
 router(app);
-var engine = require('./controllers/engine.js');
-engine(app);
+//var engine = require('./controllers/engine.js');
+//engine(app);
 
 var players = [ {},{},{},{},{},{} ];
 var roomSize = 50;
