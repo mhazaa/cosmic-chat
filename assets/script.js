@@ -732,9 +732,9 @@ function playSetup(){
   let mountain = new Actor('imgs/mountain.png', 0, 0, 1328, stages.midground);
   let firstIsland = new Actor(['imgs/island1.json','first_island.png'], 170, 1080-350-292, 350, stages.midground);
   let upsideDownIsland = new Actor('imgs/upsideDown_island.png', 2916, 1080-1296+2600, 864, stages.midground);
-  let shrooms1 = new Actor(['imgs/animations/shrooms1.json','shrooms1_0.png'], 0, 1080-259-626, 259, stages.midground);
+  let shrooms1 = new Actor(['imgs/animations/shrooms1.json','shrooms1_0.png'], -30, 1080-259-640, 259, stages.midground);
   shrooms1.animate('shrooms1_');
-  let shrooms2 = new Actor(['imgs/animations/shrooms2.json','shrooms2_0.png'], 615, 1080-270-496, 270, stages.midground);
+  let shrooms2 = new Actor(['imgs/animations/shrooms2.json','shrooms2_0.png'], 615, 1080-270-500, 270, stages.midground);
   shrooms2.animate('shrooms2_');
   let firstIslandTrees = new Actor(['imgs/animations/island1.json','island1_0.png'], 60, 1080-520+138, 520, stages.midground);
   firstIslandTrees.animate('island1_');
