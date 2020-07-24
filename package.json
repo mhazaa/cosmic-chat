@@ -1,5 +1,5 @@
 {
-  "name": "node_setup",
+  "name": "cosmic-chat",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "author": "",
+  "author": "Magdi Hazaa",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
