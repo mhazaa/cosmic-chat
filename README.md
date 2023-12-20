@@ -6,4 +6,4 @@ Cosmic Chat is a a visual, atmospheric multiplayer world where users can explore
 
 If you're interested in my process for creating the all the art, assets, and music for this project. I go through it more on my website.
 
-https://magdihazaa.com/case-studies/cosmicchat/
+https://magdihazaa.com/case-studies/cosmic-chat/
